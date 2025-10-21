@@ -63,10 +63,9 @@ sha:{{self.archive_hash().strip()}}
 {% block step_build %}
 sed -i 's/GOTOOLCHAIN=auto/GOTOOLCHAIN=local/g' go.env
 rm -r "test/fixedbugs/issue27836.dir"
-
-bin/go build -o pkg/tool/{{self.tool_folder_name().strip()}} src/cmd/pack
 {% endblock %}
 
 {% block install %}
 mv ${tmp}/src/* ${out}
+bin/go build -o pkg/tool/{{self.tool_folder_name().strip()}} src/cmd/pack
 {% endblock %}
