@@ -35,6 +35,12 @@ curl 'https://go.dev/dl/?mode=json&include=all' | jq -r '.[] | select(.version==
 {% endif %}
 {% endblock %}
 
+{% block step_patch %}
+(base64 -d | patch -p1) << EOF
+{{ix.load_file('//go/1.25/revert_coverage.diff') | b64e}}
+EOF
+{% endblock %}
+
 {% block fetch %}
 https://go.dev/dl/go{{self.go_version().strip()}}.{{self.archive_name().strip()}}
 sha:{{self.archive_hash().strip()}}
