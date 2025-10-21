@@ -37,7 +37,7 @@ curl 'https://go.dev/dl/?mode=json&include=all' | jq -r '.[] | select(.version==
 
 {% block step_patch %}
 (base64 -d | patch -p1) << EOF
-{{ix.load_file('//go/1.25/revert_coverage.diff') | b64e}}
+{{ix.load_file('//go/1.25/old-coverage.diff') | b64e}}
 EOF
 {% endblock %}
 
