@@ -19,11 +19,6 @@ diff --git a/src/cmd/compile/internal/test/inl_test.go b/src/cmd/compile/interna
  	testenv.MustHaveGoBuild(t)
 
  	modes := []string{"-covermode=set", "-covermode=atomic"}
-Index: src/cmd/covdata/tool_test.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/covdata/tool_test.go b/src/cmd/covdata/tool_test.go
 --- a/src/cmd/covdata/tool_test.go	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/covdata/tool_test.go	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -45,11 +40,6 @@ diff --git a/src/cmd/covdata/tool_test.go b/src/cmd/covdata/tool_test.go
  	dir := tempDir(t)
  	if testing.Short() {
  		t.Skip()
-Index: src/cmd/go/alldocs.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/alldocs.go b/src/cmd/go/alldocs.go
 --- a/src/cmd/go/alldocs.go	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/alldocs.go	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -61,11 +51,6 @@ diff --git a/src/cmd/go/alldocs.go b/src/cmd/go/alldocs.go
  //
  // Special-purpose environment variables:
  //
-Index: src/cmd/go/internal/help/helpdoc.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/internal/help/helpdoc.go b/src/cmd/go/internal/help/helpdoc.go
 --- a/src/cmd/go/internal/help/helpdoc.go	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/internal/help/helpdoc.go	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -77,11 +62,6 @@ diff --git a/src/cmd/go/internal/help/helpdoc.go b/src/cmd/go/internal/help/help
 
  Special-purpose environment variables:
 
-Index: src/cmd/go/internal/list/list.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/internal/list/list.go b/src/cmd/go/internal/list/list.go
 --- a/src/cmd/go/internal/list/list.go	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/internal/list/list.go	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -105,11 +85,6 @@ diff --git a/src/cmd/go/internal/list/list.go b/src/cmd/go/internal/list/list.go
  			load.PrepareForCoverageBuild(pkgs)
  		}
  		a := &work.Action{}
-Index: src/cmd/go/internal/load/pkg.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/internal/load/pkg.go b/src/cmd/go/internal/load/pkg.go
 --- a/src/cmd/go/internal/load/pkg.go	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/internal/load/pkg.go	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -249,11 +224,6 @@ diff --git a/src/cmd/go/internal/load/pkg.go b/src/cmd/go/internal/load/pkg.go
 +	}
 +	return coverVars
 +}
-Index: src/cmd/go/internal/load/test.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/internal/load/test.go b/src/cmd/go/internal/load/test.go
 --- a/src/cmd/go/internal/load/test.go	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/internal/load/test.go	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -490,11 +460,6 @@ diff --git a/src/cmd/go/internal/load/test.go b/src/cmd/go/internal/load/test.go
 
  package main
 
-Index: src/cmd/go/internal/run/run.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/internal/run/run.go b/src/cmd/go/internal/run/run.go
 --- a/src/cmd/go/internal/run/run.go	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/internal/run/run.go	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -518,11 +483,6 @@ diff --git a/src/cmd/go/internal/run/run.go b/src/cmd/go/internal/run/run.go
  		load.PrepareForCoverageBuild([]*load.Package{p})
  	}
 
-Index: src/cmd/go/internal/test/test.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/internal/test/test.go b/src/cmd/go/internal/test/test.go
 --- a/src/cmd/go/internal/test/test.go	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/internal/test/test.go	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -564,11 +524,6 @@ diff --git a/src/cmd/go/internal/test/test.go b/src/cmd/go/internal/test/test.go
  			if err := sh.Mkdir(a.Objdir); err != nil {
  				return err
  			}
-Index: src/cmd/go/internal/work/build.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/internal/work/build.go b/src/cmd/go/internal/work/build.go
 --- a/src/cmd/go/internal/work/build.go	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/internal/work/build.go	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -636,11 +591,6 @@ diff --git a/src/cmd/go/internal/work/build.go b/src/cmd/go/internal/work/build.
  		load.PrepareForCoverageBuild(pkgs)
  	}
 
-Index: src/cmd/go/internal/work/exec.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/internal/work/exec.go b/src/cmd/go/internal/work/exec.go
 --- a/src/cmd/go/internal/work/exec.go	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/internal/work/exec.go	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -764,11 +714,6 @@ diff --git a/src/cmd/go/internal/work/exec.go b/src/cmd/go/internal/work/exec.go
  	pkgcfg := a.Objdir + "pkgcfg.txt"
  	covoutputs := a.Objdir + "coveroutfiles.txt"
  	odir := filepath.Dir(outfiles[0])
-Index: src/cmd/go/testdata/script/cover_build_cmdline_pkgs.txt
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/testdata/script/cover_build_cmdline_pkgs.txt b/src/cmd/go/testdata/script/cover_build_cmdline_pkgs.txt
 --- a/src/cmd/go/testdata/script/cover_build_cmdline_pkgs.txt	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/testdata/script/cover_build_cmdline_pkgs.txt	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -780,11 +725,6 @@ diff --git a/src/cmd/go/testdata/script/cover_build_cmdline_pkgs.txt b/src/cmd/g
 
  # Compile an object.
  go tool compile -p tiny tiny/tiny.go tiny/tiny2.go
-Index: src/cmd/go/testdata/script/cover_build_pkg_select.txt
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/testdata/script/cover_build_pkg_select.txt b/src/cmd/go/testdata/script/cover_build_pkg_select.txt
 --- a/src/cmd/go/testdata/script/cover_build_pkg_select.txt	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/testdata/script/cover_build_pkg_select.txt	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -798,11 +738,6 @@ diff --git a/src/cmd/go/testdata/script/cover_build_pkg_select.txt b/src/cmd/go/
  #-------------------------------------------
 
  # Build for coverage.
-Index: src/cmd/go/testdata/script/cover_build_simple.txt
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/testdata/script/cover_build_simple.txt b/src/cmd/go/testdata/script/cover_build_simple.txt
 --- a/src/cmd/go/testdata/script/cover_build_simple.txt	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/testdata/script/cover_build_simple.txt	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -816,11 +751,6 @@ diff --git a/src/cmd/go/testdata/script/cover_build_simple.txt b/src/cmd/go/test
  # Build for coverage.
  go build -gcflags=-m -o example.exe -cover example/main &
  [race] go build -o examplewithrace.exe -race -cover example/main &
-Index: src/cmd/go/testdata/script/cover_coverpkg_partial.txt
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/testdata/script/cover_coverpkg_partial.txt b/src/cmd/go/testdata/script/cover_coverpkg_partial.txt
 --- a/src/cmd/go/testdata/script/cover_coverpkg_partial.txt	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/testdata/script/cover_coverpkg_partial.txt	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -832,11 +762,6 @@ diff --git a/src/cmd/go/testdata/script/cover_coverpkg_partial.txt b/src/cmd/go/
 
  # Test all packages with -coverpkg=./...
  go test -coverprofile=cov.p -coverpkg=./... ./...
-Index: src/cmd/go/testdata/script/cover_coverpkg_with_init.txt
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/testdata/script/cover_coverpkg_with_init.txt b/src/cmd/go/testdata/script/cover_coverpkg_with_init.txt
 --- a/src/cmd/go/testdata/script/cover_coverpkg_with_init.txt	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/testdata/script/cover_coverpkg_with_init.txt	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -848,11 +773,6 @@ diff --git a/src/cmd/go/testdata/script/cover_coverpkg_with_init.txt b/src/cmd/g
 
  # Verify correct statements percentages. We have a total of 10
  # statements in the packages matched by "./..."; package "a" (for
-Index: src/cmd/go/testdata/script/cover_list.txt
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/testdata/script/cover_list.txt b/src/cmd/go/testdata/script/cover_list.txt
 --- a/src/cmd/go/testdata/script/cover_list.txt	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/testdata/script/cover_list.txt	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -864,11 +784,6 @@ diff --git a/src/cmd/go/testdata/script/cover_list.txt b/src/cmd/go/testdata/scr
 
  env GOBIN=$WORK/bin
 
-Index: src/cmd/go/testdata/script/cover_main_import_path.txt
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/testdata/script/cover_main_import_path.txt b/src/cmd/go/testdata/script/cover_main_import_path.txt
 --- a/src/cmd/go/testdata/script/cover_main_import_path.txt	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/testdata/script/cover_main_import_path.txt	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -880,11 +795,6 @@ diff --git a/src/cmd/go/testdata/script/cover_main_import_path.txt b/src/cmd/go/
 
  # Build this program with -cover and run to collect a profile.
 
-Index: src/cmd/go/testdata/script/cover_statements.txt
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/testdata/script/cover_statements.txt b/src/cmd/go/testdata/script/cover_statements.txt
 --- a/src/cmd/go/testdata/script/cover_statements.txt	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/testdata/script/cover_statements.txt	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -930,11 +840,6 @@ diff --git a/src/cmd/go/testdata/script/cover_statements.txt b/src/cmd/go/testda
 
  -- go.mod --
  module m
-Index: src/cmd/go/testdata/script/cover_sync_atomic_import.txt
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/testdata/script/cover_sync_atomic_import.txt b/src/cmd/go/testdata/script/cover_sync_atomic_import.txt
 --- a/src/cmd/go/testdata/script/cover_sync_atomic_import.txt	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/testdata/script/cover_sync_atomic_import.txt	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -945,11 +850,6 @@ diff --git a/src/cmd/go/testdata/script/cover_sync_atomic_import.txt b/src/cmd/g
 
  go test -short -cover -covermode=atomic -coverpkg=coverdep/p1 coverdep
 
-Index: src/cmd/go/testdata/script/cover_test_pkgselect.txt
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/testdata/script/cover_test_pkgselect.txt b/src/cmd/go/testdata/script/cover_test_pkgselect.txt
 --- a/src/cmd/go/testdata/script/cover_test_pkgselect.txt	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/testdata/script/cover_test_pkgselect.txt	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -963,11 +863,6 @@ diff --git a/src/cmd/go/testdata/script/cover_test_pkgselect.txt b/src/cmd/go/te
  # Baseline run.
  go test -cover example/foo
  stdout 'coverage: 50.0% of statements$'
-Index: src/cmd/go/testdata/script/cover_var_init_order.txt
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/testdata/script/cover_var_init_order.txt b/src/cmd/go/testdata/script/cover_var_init_order.txt
 --- a/src/cmd/go/testdata/script/cover_var_init_order.txt	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/testdata/script/cover_var_init_order.txt	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -981,11 +876,6 @@ diff --git a/src/cmd/go/testdata/script/cover_var_init_order.txt b/src/cmd/go/te
  go test -cover example
 
  -- go.mod --
-Index: src/cmd/go/testdata/script/testing_coverage.txt
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/go/testdata/script/testing_coverage.txt b/src/cmd/go/testdata/script/testing_coverage.txt
 --- a/src/cmd/go/testdata/script/testing_coverage.txt	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/go/testdata/script/testing_coverage.txt	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -997,11 +887,6 @@ diff --git a/src/cmd/go/testdata/script/testing_coverage.txt b/src/cmd/go/testda
 
  # Simple test.
  go test -v -cover -count=1
-Index: src/cmd/internal/cov/read_test.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/cmd/internal/cov/read_test.go b/src/cmd/internal/cov/read_test.go
 --- a/src/cmd/internal/cov/read_test.go	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/cmd/internal/cov/read_test.go	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -1023,11 +908,6 @@ diff --git a/src/cmd/internal/cov/read_test.go b/src/cmd/internal/cov/read_test.
 
  	// Build a tiny test program with -cover. Smallness is important;
  	// it is one of the factors that triggers issue 58411.
-Index: src/internal/buildcfg/exp.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/internal/buildcfg/exp.go b/src/internal/buildcfg/exp.go
 --- a/src/internal/buildcfg/exp.go	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/internal/buildcfg/exp.go	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -1051,11 +931,6 @@ diff --git a/src/internal/buildcfg/exp.go b/src/internal/buildcfg/exp.go
  	}
 
  	// Start with the statically enabled set of experiments.
-Index: src/internal/coverage/cfile/emitdata_test.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/internal/coverage/cfile/emitdata_test.go b/src/internal/coverage/cfile/emitdata_test.go
 --- a/src/internal/coverage/cfile/emitdata_test.go	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/internal/coverage/cfile/emitdata_test.go	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -1087,11 +962,6 @@ diff --git a/src/internal/coverage/cfile/emitdata_test.go b/src/internal/coverag
 
  	// This test requires "go test -race -cover", meaning that we need
  	// go build, go run, and "-race" support.
-Index: src/internal/coverage/cfile/ts_test.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/internal/coverage/cfile/ts_test.go b/src/internal/coverage/cfile/ts_test.go
 --- a/src/internal/coverage/cfile/ts_test.go	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/internal/coverage/cfile/ts_test.go	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -1123,11 +993,6 @@ diff --git a/src/internal/coverage/cfile/ts_test.go b/src/internal/coverage/cfil
  	if testing.CoverMode() == "" {
  		return
  	}
-Index: src/internal/goexperiment/exp_coverageredesign_off.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/internal/goexperiment/exp_coverageredesign_off.go b/src/internal/goexperiment/exp_coverageredesign_off.go
 new file mode 100644
 --- /dev/null	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -1141,11 +1006,6 @@ new file mode 100644
 +
 +const CoverageRedesign = false
 +const CoverageRedesignInt = 0
-Index: src/internal/goexperiment/exp_coverageredesign_on.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/internal/goexperiment/exp_coverageredesign_on.go b/src/internal/goexperiment/exp_coverageredesign_on.go
 new file mode 100644
 --- /dev/null	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -1159,11 +1019,6 @@ new file mode 100644
 +
 +const CoverageRedesign = true
 +const CoverageRedesignInt = 1
-Index: src/internal/goexperiment/flags.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/internal/goexperiment/flags.go b/src/internal/goexperiment/flags.go
 --- a/src/internal/goexperiment/flags.go	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/internal/goexperiment/flags.go	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -1178,11 +1033,6 @@ diff --git a/src/internal/goexperiment/flags.go b/src/internal/goexperiment/flag
  	// Arenas causes the "arena" standard library package to be visible
  	// to the outside world.
  	Arenas bool
-Index: src/testing/cover.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/testing/cover.go b/src/testing/cover.go
 --- a/src/testing/cover.go	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/testing/cover.go	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -1296,11 +1146,6 @@ diff --git a/src/testing/cover.go b/src/testing/cover.go
 +	}
 +	fmt.Printf("coverage: %.1f%% of statements%s\n", 100*float64(active)/float64(total), cover.CoveredPackages)
  }
-Index: src/testing/newcover.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/testing/newcover.go b/src/testing/newcover.go
 --- a/src/testing/newcover.go	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/testing/newcover.go	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
@@ -1376,11 +1221,6 @@ diff --git a/src/testing/newcover.go b/src/testing/newcover.go
 -	return cover.snapshotcov()
 +	return cover2.snapshotcov()
  }
-Index: src/testing/testing.go
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/testing/testing.go b/src/testing/testing.go
 --- a/src/testing/testing.go	(revision 6e676ab2b809d46623acb5988248d95d1eb7939c)
 +++ b/src/testing/testing.go	(revision a10fdd347313ab84eba4c6f05098b69c39c56a20)
