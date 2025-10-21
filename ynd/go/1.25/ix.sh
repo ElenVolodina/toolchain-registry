@@ -69,5 +69,5 @@ bin/go build -o bin src/cmd/pack
 
 {% block install %}
 mv ${tmp}/src/* ${out}
-mv ${tmp}/bin/pack ${out}/pkg/tool/{{self.tool_folder_name().strip()}}
+mv ${tmp}/bin/pack ${out}
 {% endblock %}
