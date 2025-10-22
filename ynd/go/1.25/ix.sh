@@ -48,6 +48,7 @@ sha:{{self.archive_hash().strip()}}
 
 {% block step_build %}
 bin/go build "src/cmd/pack"
+
 sed -i 's/GOTOOLCHAIN=auto/GOTOOLCHAIN=local/g' go.env
 rm -r "test/fixedbugs/issue27836.dir"
 {% endblock %}
