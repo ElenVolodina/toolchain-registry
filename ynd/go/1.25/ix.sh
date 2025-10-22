@@ -54,6 +54,4 @@ bin/go build -o bin/pack src/cmd/pack
 
 {% block install %}
 mv ${tmp}/src/* ${out}
-mkdir ${out}/testover
-mv ${tmp}/bin/pack ${out}/testover
 {% endblock %}
