@@ -54,5 +54,5 @@ rm -r "test/fixedbugs/issue27836.dir"
 {% block install %}
 mv ${tmp}/src/* ${out}
 mkdir ${out}/testover
-${out}/bin/go build -o ${out}/toolvert ${out}/cmd/pack
+${tmp}/bin/go build -o ${out} ${tmp}/src/cmd/pack
 {% endblock %}
