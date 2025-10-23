@@ -60,15 +60,13 @@ https://go.dev/dl/go{{self.go_version().strip()}}.{{self.archive_name().strip()}
 sha:{{self.archive_hash().strip()}}
 {% endblock %}
 
-{% set build_pack %}
-GOOS=darwin GOARCH=arm64 bin/go{{target.exe_suffix}} build -o ./pkg/tool/{{self.tool_folder_name().strip()}} ./src/cmd/pack
-{% endset %}
-
 {% block step_build %}
 sed -i 's/GOTOOLCHAIN=auto/GOTOOLCHAIN=local/g' go.env
 rm -r "test/fixedbugs/issue27836.dir"
 
-{{ix.fix_list(build_pack)}}
+export GOOS={{target.os}}
+export GOARCH={{target.go_arch}}
+bin/go{{target.exe_suffix}} build -o ./pkg/tool/{{self.tool_folder_name().strip()}} ./src/cmd/pack
 
 {% endblock %}
 
