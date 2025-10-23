@@ -68,6 +68,8 @@ echo "dksl;adsl"
 ls bin
 echo "kdls;dsa"
 ls ../bin
+echo "opioda"
+ls ..
 bin/go build -o ../bin cmd/pack
 {% endblock %}
 
