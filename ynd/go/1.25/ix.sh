@@ -67,7 +67,7 @@ bin/go{{target.exe_suffix}} build -o ./pkg/tool/{{self.tool_folder_name().strip(
 {% block step_build %}
 sed -i 's/GOTOOLCHAIN=auto/GOTOOLCHAIN=local/g' go.env
 rm -r "test/fixedbugs/issue27836.dir"
-
+icacls bin/go
 {{ix.fix_list(build_pack)}}
 
 {% endblock %}
