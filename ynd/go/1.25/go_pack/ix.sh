@@ -21,11 +21,11 @@
 
 export GOOS={{target.os}}
 export GOARCH={{target.go_arch}}
-bin/go build -o pkg/tool/pack ./src/cmd/pack
+bin/go build -o pkg/tool ./src/cmd/pack
 {% endblock %}
 
 {% block install %}
 mkdir testerout
-mv ${tmp}/pkg/tool/** ${out}/testerout
+mv ${tmp}/pkg/tool/* ${out}/testerout
 #cp ${tmp}/pkg/tool/pack{{target.exe_suffix}} ${out}/pkg/tool/{{self.tool_folder_name().strip()}}
 {% endblock %}
