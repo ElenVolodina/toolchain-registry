@@ -60,9 +60,9 @@ https://go.dev/dl/go{{self.go_version().strip()}}.{{self.archive_name().strip()}
 sha:{{self.archive_hash().strip()}}
 {% endblock %}
 
-{% block build_pack %}
+{% set build_pack %}
 bin/go{{target.exe_suffix}} build -o ./pkg/tool/{{self.tool_folder_name().strip()}} ./src/cmd/pack
-{% endblock %}
+{% endset %}
 
 {% block step_build %}
 sed -i 's/GOTOOLCHAIN=auto/GOTOOLCHAIN=local/g' go.env
