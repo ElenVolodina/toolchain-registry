@@ -19,24 +19,19 @@
 {% block step_build %}
 {{super()}}
 
-echo "jdksljad"
-echo {{target.os}}
-echo {{target.go_arch}}
-{% if linux and x86_64 %}
-  echo "linux x86_64"
-{% elif linux and aarch64 %}
-  echo "linux aarch64"
-{% elif darwin and x86_64 %}
-  echo "darwin x86_64"
-{% elif darwin and arm64 %}
-  echo "darwin arm64"
-{% elif mingw32 %}
-  echo "mingw32"
-{% endif %}
-
 export GOOS={{target.os}}
 export GOARCH={{target.go_arch}}
 bin/go build -o pkg/tool/{{self.tool_folder_name().strip()}} ./src/cmd/pack
+
+echo "jdksljad"
+echo {{self.tool_folder_name().strip()}}
+ls pkg/tool/
+echo "jdkslajdlas"
+ls pkg/tool/{{self.tool_folder_name().strip()}}
+echo "jdkslad"
+ls
+echo "jdkslad"
+
 {% endblock %}
 
 {% block install %}
