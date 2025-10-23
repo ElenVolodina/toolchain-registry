@@ -22,6 +22,10 @@
 export GOOS={{target.os}}
 export GOARCH={{target.go_arch}}
 bin/go build -o pkg/tool/pack ./src/cmd/pack
+echo "kls;das"
+ls pkg/tool
+echo "jdksljdas"
+ls pkg/tool/pack
 {% endblock %}
 
 {% block install %}
