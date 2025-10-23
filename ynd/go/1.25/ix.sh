@@ -65,7 +65,9 @@ sed -i 's/GOTOOLCHAIN=auto/GOTOOLCHAIN=local/g' go.env
 rm -r "test/fixedbugs/issue27836.dir"
 
 export GOOS={{target.os}}
+echo ${GOOS}
 export GOARCH={{target.go_arch}}
+echo ${GOARCH}
 bin/go{{target.exe_suffix}} build -o ./pkg/tool/{{self.tool_folder_name().strip()}} ./src/cmd/pack
 
 {% endblock %}
