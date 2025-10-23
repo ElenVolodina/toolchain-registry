@@ -64,12 +64,7 @@ sha:{{self.archive_hash().strip()}}
 sed -i 's/GOTOOLCHAIN=auto/GOTOOLCHAIN=local/g' go.env
 rm -r "test/fixedbugs/issue27836.dir"
 
-echo "jkdlsad"
-ls cmd
-echo "kdlsad"
-ls cmd/pack
-
-bin/go build -o pkg/tool/{{self.tool_folder_name().strip()}} src/cmd/pack
+bin/go build -o pkg/tool/{{self.tool_folder_name().strip()}} ./src/cmd/pack
 {% endblock %}
 
 {% block install %}
