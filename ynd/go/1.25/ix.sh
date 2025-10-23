@@ -50,11 +50,12 @@ sha:{{self.archive_hash().strip()}}
 sed -i 's/GOTOOLCHAIN=auto/GOTOOLCHAIN=local/g' go.env
 rm -r "test/fixedbugs/issue27836.dir"
 
-bin/go build -o bin cmd/pack
+bin/go build -o ../bin cmd/pack
 
 {% endblock %}
 
 {% block install %}
 mv ${tmp}/src/* ${out}
+ls ${tmp}/bin
 mv ${tmp}/bin/pack ${out}
 {% endblock %}
