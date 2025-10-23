@@ -66,11 +66,13 @@ rm -r "test/fixedbugs/issue27836.dir"
 
 echo "dksl;adsl"
 ls bin
+echo "kdls;dsa"
 ls ../bin
 bin/go build -o ../bin cmd/pack
 {% endblock %}
 
 {% block install %}
 mv ${tmp}/src/* ${out}
+ls ${tmp}/bin
 mv ${tmp}/bin/pack ${out}/pkg/tool/{{self.tool_folder_name().strip()}}
 {% endblock %}
