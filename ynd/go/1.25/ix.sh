@@ -61,7 +61,7 @@ sha:{{self.archive_hash().strip()}}
 {% endblock %}
 
 {% set build_pack %}
-bin/go{{target.exe_suffix}} build ./src/cmd/pack
+bin/go{{target.exe_suffix}} build -o './pkg/tool/{{self.tool_folder_name().strip()}}' './src/cmd/pack'
 {% endset %}
 
 {% block step_build %}
