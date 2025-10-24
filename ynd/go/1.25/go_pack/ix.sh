@@ -1,6 +1,5 @@
 {% extends '//ynd/go/1.25/base.sh' %}
 
-{% set build_pack %}true{% endset %}
 
 {% block tool_folder_name %}
 {% if linux and x86_64 %}
