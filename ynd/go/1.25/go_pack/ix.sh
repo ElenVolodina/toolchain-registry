@@ -28,7 +28,8 @@ export GOARCH={{target.go_arch}}
 bin/go build -o pkg/tool/ ./src/cmd/pack
 echo "jfkdlf"
 pwd
-sleep 600
+
+echo ${out}
 {% endblock %}
 
 {% block install %}
