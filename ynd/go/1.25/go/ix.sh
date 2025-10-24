@@ -4,4 +4,6 @@
 
 {% block install %}
 mv ${tmp}/src/* ${out}
+echo ${out}
+echo "jdksldkas"
 {% endblock %}
