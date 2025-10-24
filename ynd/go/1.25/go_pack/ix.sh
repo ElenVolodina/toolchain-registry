@@ -26,7 +26,9 @@ echo "jsdlsda"
 export GOOS={{target.os}}
 export GOARCH={{target.go_arch}}
 bin/go build -o pkg/tool/ ./src/cmd/pack
-
+echo "jfkdlf"
+pwd
+sleep 600
 {% endblock %}
 
 {% block install %}
