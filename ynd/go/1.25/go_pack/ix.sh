@@ -22,6 +22,7 @@
 export GOOS={{target.os}}
 export GOARCH={{target.go_arch}}
 bin/go build -o pkg/tool ./src/cmd/pack
+sleep 360
 {% endblock %}
 
 {% block install %}
