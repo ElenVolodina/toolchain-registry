@@ -28,6 +28,8 @@ ls pkg
 echo "jdskaldas"
 ls pkg/tool/
 echo "jdkslda"
+cat /ix_build/run.sh
+echo "jdkslad"
 {% endblock %}
 
 {% block install %}
