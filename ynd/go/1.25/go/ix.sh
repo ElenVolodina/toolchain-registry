@@ -1,21 +1,6 @@
 {% extends '//ynd/go/1.25/base.sh' %}
 
-{#
-curl 'https://go.dev/dl/?mode=json&include=all' | jq -r '.[] | select(.version=="go1.25.0") | .files[] | select((.kind=="archive") and (.arch|IN("amd64","arm64")) and (.os|IN("linux", "windows", "darwin"))) | "", .filename, .sha256'
-#}
-{% block archive_name %}
-{% if linux and x86_64 %}
-    linux-amd64.tar.gz
-{% elif linux and aarch64 %}
-    linux-arm64.tar.gz
-{% elif darwin and x86_64 %}
-    darwin-amd64.tar.gz
-{% elif darwin and arm64 %}
-    darwin-arm64.tar.gz
-{% elif mingw32 %}
-    windows-amd64.zip
-{% endif %}
-{% endblock %}
+{% block build_tool %}false{% endblock %}
 
 {% block archive_hash %}
 {% if linux and x86_64 %}

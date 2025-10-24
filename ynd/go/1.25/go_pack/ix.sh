@@ -1,5 +1,7 @@
 {% extends '//ynd/go/1.25/base.sh' %}
 
+{% block build_tool %}true{% endblock %}
+
 {% block tool_folder_name %}
 {% if linux and x86_64 %}
     linux_amd64
@@ -12,10 +14,6 @@
 {% elif mingw32 %}
     windows_amd64
 {% endif %}
-{% endblock %}
-
-{% block archive_name %}
-    linux-amd64.tar.gz
 {% endblock %}
 
 {% block archive_hash %}
