@@ -20,19 +20,18 @@
 {{super()}}
 
 echo "jdkslad"
-ls
-echo "kdslda"
-ls ..
+ls /
 echo "jsdlsda"
 
 export GOOS={{target.os}}
 export GOARCH={{target.go_arch}}
 bin/go build -o pkg/tool/ ./src/cmd/pack
 
-echo ${MAIN_GO_FOLDER}
 {% endblock %}
 
 {% block install %}
+echo "dkjslakddddddddddddd"
+echo ${tmp}
 mkdir testerout
 cp -r ${tmp}/pkg/tool/* ${out}/testerout/
 {% endblock %}
