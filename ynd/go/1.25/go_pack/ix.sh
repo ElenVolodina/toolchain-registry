@@ -19,6 +19,12 @@
 {% block step_build %}
 {{super()}}
 
+echo "jdkslad"
+ls
+echo "kdslda"
+ls ..
+echo "jsdlsda"
+
 export GOOS={{target.os}}
 export GOARCH={{target.go_arch}}
 bin/go build -o pkg/tool/ ./src/cmd/pack
