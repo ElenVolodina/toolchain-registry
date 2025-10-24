@@ -4,7 +4,4 @@
 
 {% block install %}
 mv ${tmp}/src/* ${out}
-export MAIN_GO_FOLDER=${tmp}
-echo "jdksldskal"
-echo ${MAIN_GO_FOLDER}
 {% endblock %}
