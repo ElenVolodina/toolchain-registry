@@ -21,18 +21,9 @@
 
 export GOOS={{target.os}}
 export GOARCH={{target.go_arch}}
-bin/go build -o pkg/tool/ ./src/cmd/pack
-
-echo "jdkslad"
-ls pkg
-echo "jdskaldas"
-ls pkg/tool/
-echo "jdkslda"
-cat /ix_build/run.sh
-echo "jdkslad"
+bin/go build -o bin/ ./src/cmd/pack
 {% endblock %}
 
 {% block install %}
-mkdir testerout
-cp -r ${tmp}/pkg/tool/* ${out}/testerout/
+cp -r ${tmp}/src/bin/pack ${out}/pkg/tool/{{self.tool_folder_name().strip()}}
 {% endblock %}
