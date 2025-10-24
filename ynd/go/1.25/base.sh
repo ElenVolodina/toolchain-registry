@@ -11,9 +11,6 @@ EOF
 {% endblock %}
 
 {% block fetch %}
-echo "jdkslad"
-echo "fetching"
-echo {{self.archive_name().strip()}}
 https://go.dev/dl/go{{self.go_version().strip()}}.{{self.archive_name().strip()}}
 sha:{{self.archive_hash().strip()}}
 {% endblock %}
