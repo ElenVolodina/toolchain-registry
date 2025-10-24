@@ -28,6 +28,8 @@ echo "jsdlsda"
 export GOOS={{target.os}}
 export GOARCH={{target.go_arch}}
 bin/go build -o pkg/tool/ ./src/cmd/pack
+
+echo ${MAIN_GO_FOLDER}
 {% endblock %}
 
 {% block install %}
