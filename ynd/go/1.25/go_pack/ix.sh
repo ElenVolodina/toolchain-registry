@@ -31,6 +31,5 @@ bin/go build -o bin/ ./src/cmd/pack
 {% endblock %}
 
 {% block install %}
-mkdir -p ${out}/pkg/tool/{{self.tool_folder_name().strip()}}
 cp -r ${tmp}/src/bin/pack ${out}/pkg/tool/{{self.tool_folder_name().strip()}}
 {% endblock %}
