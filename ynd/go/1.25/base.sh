@@ -4,6 +4,8 @@
 1.25.0
 {% endblock %}
 
+{% set build_pack %}false{% endset %}
+
 {#
 curl 'https://go.dev/dl/?mode=json&include=all' | jq -r '.[] | select(.version=="go1.25.0") | .files[] | select((.kind=="archive") and (.arch|IN("amd64","arm64")) and (.os|IN("linux", "windows", "darwin"))) | "", .filename, .sha256'
 #}
@@ -42,6 +44,9 @@ EOF
 {% endblock %}
 
 {% block fetch %}
+echo "jdkslad"
+echo "fetching"
+echo {{self.archive_name().strip()}}
 https://go.dev/dl/go{{self.go_version().strip()}}.{{self.archive_name().strip()}}
 sha:{{self.archive_hash().strip()}}
 {% endblock %}
