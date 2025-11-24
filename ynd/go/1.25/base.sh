@@ -51,5 +51,5 @@ sha:{{self.archive_hash().strip()}}
 {% block step_build %}
 sed -i 's/GOTOOLCHAIN=auto/GOTOOLCHAIN=local/g' go.env
 rm -r "test/fixedbugs/issue27836.dir"
-rm ${tmp}/src/pkg/tool/cover{{target.exe_suffix}}
+rm pkg/tool/cover{{target.exe_suffix}}
 {% endblock %}
