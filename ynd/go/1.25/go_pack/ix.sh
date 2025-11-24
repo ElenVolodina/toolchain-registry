@@ -26,9 +26,11 @@ export GOARCH="amd64"
 export GOOS={{target.os}}
 export GOARCH={{target.go_arch}}
 {% endif %}
-bin/go build -o bin/ ./src/cmd/pack
+
+bin/go build -o bin/tools ./src/cmd/pack
+bin/go build -o bin/tools ./src/cmd/cover
 {% endblock %}
 
 {% block install %}
-cp -r ${tmp}/src/bin/pack{{target.exe_suffix}} ${out}/pkg/tool/{{self.tool_folder_name().strip()}}
+cp -r ${tmp}/src/bin/tools/* ${out}/pkg/tool/{{self.tool_folder_name().strip()}}
 {% endblock %}
