@@ -27,6 +27,7 @@ export GOOS={{target.os}}
 export GOARCH={{target.go_arch}}
 {% endif %}
 
+mkdir bin/tools
 bin/go build -o bin/tools ./src/cmd/pack
 bin/go build -o bin/tools ./src/cmd/cover
 {% endblock %}
