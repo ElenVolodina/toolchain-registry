@@ -37,6 +37,20 @@ curl 'https://go.dev/dl/?mode=json&include=all' | jq -r '.[] | select(.version==
 {% endif %}
 {% endblock %}
 
+{% block tool_folder_name %}
+{% if linux and x86_64 %}
+    linux_amd64
+{% elif linux and aarch64 %}
+    linux_arm64
+{% elif darwin and x86_64 %}
+    darwin_amd64
+{% elif darwin and arm64 %}
+    darwin_arm64
+{% elif mingw32 %}
+    windows_amd64
+{% endif %}
+{% endblock %}
+
 {% block step_patch %}
 (base64 -d | patch -p1) << EOF
 {{ix.load_file('//go/1.25/old-coverage.diff') | b64e}}
@@ -51,5 +65,5 @@ sha:{{self.archive_hash().strip()}}
 {% block step_build %}
 sed -i 's/GOTOOLCHAIN=auto/GOTOOLCHAIN=local/g' go.env
 rm -r "test/fixedbugs/issue27836.dir"
-rm pkg/tool/cover{{target.exe_suffix}}
+rm pkg/tool/{{self.tool_folder_name().strip()}}/cover{{target.exe_suffix}}
 {% endblock %}
