@@ -15,6 +15,7 @@ export GOARCH={{target.go_arch}}
 
 mkdir bin/tools
 bin/go build -o bin/tools ./src/cmd/pack
+bin/go build -o bin/tools ./src/cmd/cover
 {% endblock %}
 
 {% block install %}
