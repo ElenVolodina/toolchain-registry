@@ -1,30 +1,26 @@
 {% extends '//die/std/ix.sh' %}
 
 {% block go_version %}
-1.25.4
+1.23.8
 {% endblock %}
 
-{% set build_tool %}{% block build_tool %}{% endblock %}{% endset %}
-
-{#
-curl 'https://go.dev/dl/?mode=json&include=all' | jq -r '.[] | select(.version=="go1.25.0") | .files[] | select((.kind=="archive") and (.arch|IN("amd64","arm64")) and (.os|IN("linux", "windows", "darwin"))) | "", .filename, .sha256'
-#}
+{# curl 'https://go.dev/dl/?mode=json' | jq '.[] | select(.version=="go1.23.8") | .files[] | select((.kind=="archive") and (.arch|IN("amd64","arm64")) and (.os|IN("linux", "windows", "darwin")))' #}
 {% block archive_hash %}
-{% if linux and x86_64 or build_tool %}
-    9fa5ffeda4170de60f67f3aa0f824e426421ba724c21e133c1e35d6159ca1bec
+{% if linux and x86_64 %}
+    45b87381172a58d62c977f27c4683c8681ef36580abecd14fd124d24ca306d3f
 {% elif linux and aarch64 %}
-    a68e86d4b72c2c2fecf7dfed667680b6c2a071221bbdb6913cf83ce3f80d9ff0
+    9d6d938422724a954832d6f806d397cf85ccfde8c581c201673e50e634fdc992
 {% elif darwin and x86_64 %}
-    33ba03ff9973f5bd26d516eea35328832a9525ecc4d169b15937ffe2ce66a7d8
+    4a0f0a5eb539013c1f4d989e0864aed45973c0a9d4b655ff9fd56013e74c1303
 {% elif darwin and arm64 %}
-    c1b04e74251fe1dfbc5382e73d0c6d96f49642d8aebb7ee10a7ecd4cae36ebd2
+    d4f53dcaecd67d9d2926eab7c3d674030111c2491e68025848f6839e04a4d3d1
 {% elif mingw32 %}
-    6dad204d42719795f22067553b2b042c0e710b32c5a00f6c67892865167fdfd0
+    e0ad643f94875403830e84198dc9df6149647c924bfa91521f6eb29f4c013dc7
 {% endif %}
 {% endblock %}
 
 {% block archive_name %}
-{% if linux and x86_64 or build_tool %}
+{% if linux and x86_64 %}
     linux-amd64.tar.gz
 {% elif linux and aarch64 %}
     linux-arm64.tar.gz
@@ -45,4 +41,8 @@ sha:{{self.archive_hash().strip()}}
 {% block step_build %}
 sed -i 's/GOTOOLCHAIN=auto/GOTOOLCHAIN=local/g' go.env
 rm -r "test/fixedbugs/issue27836.dir"
+{% endblock %}
+
+{% block install %}
+mv ${tmp}/src/* ${out}
 {% endblock %}
