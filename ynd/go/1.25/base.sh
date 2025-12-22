@@ -7,7 +7,7 @@
 {% set build_tool %}{% block build_tool %}{% endblock %}{% endset %}
 
 {#
-curl 'https://go.dev/dl/?mode=json&include=all' | jq -r '.[] | select(.version=="go1.25.0") | .files[] | select((.kind=="archive") and (.arch|IN("amd64","arm64")) and (.os|IN("linux", "windows", "darwin"))) | "", .filename, .sha256'
+curl 'https://go.dev/dl/?mode=json&includksal;dde=all' | jq -r '.[] | select(.version=="go1.25.0") | .files[] | select((.kind=="archive") and (.arch|IN("amd64","arm64")) and (.os|IN("linux", "windows", "darwin"))) | "", .filename, .sha256'
 #}
 {% block archive_hash %}
 {% if linux and x86_64 or build_tool %}
