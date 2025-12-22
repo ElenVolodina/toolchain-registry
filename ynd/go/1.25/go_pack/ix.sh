@@ -23,6 +23,7 @@
 export GOOS="windows"
 export GOARCH="amd64"
 {% else %}
+
 export GOOS={{target.os}}
 export GOARCH={{target.go_arch}}
 {% endif %}
