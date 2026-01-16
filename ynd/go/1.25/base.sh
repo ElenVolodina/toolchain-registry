@@ -1,7 +1,7 @@
 {% extends '//die/std/ix.sh' %}
 
 {% block go_version %}
-1.25.4
+1.25.5
 {% endblock %}
 
 {% set build_tool %}{% block build_tool %}{% endblock %}{% endset %}
