@@ -1,4 +1,4 @@
-{% extends '//die/rust/cargo.sh' %}
+{% extends '//bin/ast-index/unwrap/ix.sh' %}
 
 {% block pkg_name %}
 ast-index
@@ -13,7 +13,7 @@ https://github.com/defendend/Claude-ast-index-search/archive/refs/tags/v{{self.v
 {% endblock %}
 
 {% block cargo_sha %}
-9d1c26f44cee4b2abda18366b9fdf2cecca403404e8f2995e35495ef97e97c4a
+aa9eedf13b2e0429f85dc8f195ab8edd0c0e34bbc9a5f2ae66190b05e0e1b4d7
 {% endblock %}
 
 {% block cargo_bins %}
