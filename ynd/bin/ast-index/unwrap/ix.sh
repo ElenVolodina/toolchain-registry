@@ -26,7 +26,6 @@ bld/compiler
 {% endblock %}
 
 {% block bld_libs %}
-lib/c
 lib/darwin/c
 {{super()}}
 {% endblock %}
