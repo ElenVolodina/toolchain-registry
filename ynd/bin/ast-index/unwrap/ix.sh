@@ -1,4 +1,4 @@
-{% extends '//die/rust/cargo.sh' %}
+{% extends '//bin/ast-index/unwrap/ix.sh' %}
 
 {% block pkg_name %}
 ast-index
