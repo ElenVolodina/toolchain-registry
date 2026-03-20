@@ -27,6 +27,7 @@ bld/compiler
 
 {% block bld_libs %}
 lib/c
+ynd/bin/ast-index/{{target.os}}
 {{super()}}
 {% endblock %}
 
