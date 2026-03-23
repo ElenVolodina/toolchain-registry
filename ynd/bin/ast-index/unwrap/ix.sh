@@ -8,6 +8,12 @@ ast-index
 3.29.1
 {% endblock %}
 
+{% block std_env %}
+{{super()}}
+bin/clang/20
+{% endblock %}
+
+
 {% block cargo_url %}
 https://github.com/defendend/Claude-ast-index-search/archive/refs/tags/v{{self.version().strip()}}.tar.gz
 {% endblock %}
