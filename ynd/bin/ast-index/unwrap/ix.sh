@@ -33,6 +33,7 @@ bld/compiler
 
 {% block bld_libs %}
 lib/c
+lib/sqlite/3
 {{super()}}
 {% endblock %}
 
