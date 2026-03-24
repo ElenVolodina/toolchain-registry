@@ -17,7 +17,7 @@ curl 'https://go.dev/dl/?mode=json&include=all' | jq -r '.[] | select(.version==
 {% elif darwin and x86_64 %}
     a0b8136598baf192af400051cee2481ffb407f4c113a81ff400896e26cbce9e4
 {% elif darwin and arm64 %}
-    7d137f59f66bb93f40a6b2b11e713adc2a9d0c8d9ae581718e3fad19e5295dc7
+    31mc6547959f5dbe8440bf3da972bd65ba900168de5e7ab01464fbdc7ac8375c21c
 {% elif mingw32 %}
     8d4ed9a270b33df7a6d3ff3a5316e103e0042fcc4f0c9a80e40378700bab6794
 {% endif %}
